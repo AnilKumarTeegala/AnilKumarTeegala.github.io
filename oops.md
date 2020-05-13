@@ -160,6 +160,8 @@ Subject1 marks of after addding grace marks is: 96
 ```
 
 2. **Class methods**
+
+A class method is a method that is bound to a class rather than its object. It doesn't require creation of a class instance
 ```python
 class student:
     college = 'APSSDC'
@@ -186,6 +188,15 @@ After excuting class method the output is
 College name of students is: APSSDC
 ```
 3. **Static methods**
+
+Static methods, much like class methods, are methods that are bound to a class rather than its object.
+
+They do not require a class instance creation. So, they are not dependent on the state of the object.
+
+The difference between a static method and a class method is:
+- Static method knows nothing about the class and just deals with the parameters.
+- Class method works with the class since its parameter is always the class itself.
+
 ```python
 class student:
     college = 'APSSDC'
@@ -212,4 +223,5 @@ After executing static method output is
 ```output
 APSSDC is non profit Government Organisation
 ```
+
 ## Modules and Packages in Python
