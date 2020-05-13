@@ -1,10 +1,12 @@
+[![Python Version](https://img.shields.io/badge/python-3.x-blue.svg)](https://python.org)
+
 # Object Oriented Programming in Python
 ## Contents
 1. [Class](#Class)
 2. [Object](#Object)
 3. [Constructor](#Constructor)
 4. [Python Packages and modules using OOPs](#Modules-and-Packages-in-Python')
-    1. [Modules](#Modules)
+    1. [Module](#Module)
     2. [Packages](#Packages)
 
 
