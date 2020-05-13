@@ -24,25 +24,18 @@ If `student` is an object then,
 ## Class
 Class is a collection of attributes and methods
 
-#### Attributes
-Attributes are variables of a class that are shared between all of its instances
-
-Types of Attributes
-1. **Instance Attributes**:
-They are owned by the specific instances of a class. This means for two different instances the instance attributes are usually different
-2. **Class variable or Static Variable**:
-Class attributes are attributes which are owned by the class itself. They will be shared by all the instances of the class. Therefore they have the same value for every instance. We define class attributes outside of all the methods, usually they are placed at the top, right below the class header.
-
-
-#### Methods
-Methods are functions defined inside the body of a class. They are used to define the behaviors of an object
-
 syntax:
 ```python
 class student:
   attributes
   methods
 ```
+#### Attributes
+Attributes are variables of a class that are shared between all of its instances
+
+#### Methods
+Methods are functions defined inside the body of a class. They are used to define the behaviors of an object
+
 ## Objects
 An object is an instance of a class. When class is defined, only the description for the object is defined. Therefore, no memory or storage is allocated.
 
@@ -51,7 +44,8 @@ The example for object of student class can be:
 obj = student()
  ```
 Here, `obj` is object of class `student`
-## Special Methods
+
+## Constructor
 
 ### __init__
 We use the **__init__()** method to initialize (e.g., specify) an object’s initial attributes by giving them their default value (or state). This method must have at least one argument as well as the self variable, which refers to the object itself (e.g.: student)
@@ -59,13 +53,31 @@ We use the **__init__()** method to initialize (e.g., specify) an object’s ini
 **`Note:`** We will never have to call the `__init__()` method; it gets called automatically when we create a new `class` instance.
 ```python
 class student:
-
     # Initializer / Instance Attributes
     def __init__(self, name, rollnumber):
         self.name = name
         self.rollnumber = rollnumber
 ```
-## Constructor
+Types of Attributes
+1. **Instance variables**:
+They are owned by the specific instances of a class. This means for two different instances the instance attributes are usually different
 
-
+2. **Class variable or Static Variable**:
+Class attributes are attributes which are owned by the class itself. They will be shared by all the instances of the class. Therefore they have the same value for every instance. We define class attributes outside of all the methods, usually they are placed at the top, right below the class header.
+example:
+```python
+class student:
+  branch = 'EEE'
+  def __init__(self, name, rollnumber):
+    self.name = name
+    self.rollnumber = rollnumber
+std1 = student('Student1', '123456')
+std2 = student('Student2', '654321')
+print("Instance variables are:")
+print(std1.name)
+print(std2.name)
+print("Class variables are:")
+print(std1.branch)
+print(std2.branch)
+```
 ## Modules and Packages in Python
