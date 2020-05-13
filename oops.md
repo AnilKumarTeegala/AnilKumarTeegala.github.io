@@ -1,6 +1,7 @@
 [![Python Version](https://img.shields.io/badge/python-3.x-blue.svg)](https://python.org)
 
 # Object Oriented Programming in Python
+
 ## Contents
 1. [Class](#Class)
 2. [Object](#Object)
