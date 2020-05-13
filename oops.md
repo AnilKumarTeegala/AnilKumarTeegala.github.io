@@ -1,6 +1,6 @@
 # Object Oriented Programming in Python
 ## Contents
-1. [Class](Class)
+1. [Class](#Class)
 2. Object
 3. Constructors
 4. Python Packages and modules using OOPs
