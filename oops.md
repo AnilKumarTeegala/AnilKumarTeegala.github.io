@@ -1,4 +1,5 @@
 [![Python Version](https://img.shields.io/badge/python-3.x-blue.svg)](https://python.org)
+![issues](https://img.shields.io/github/issues/anilkumarteegala/AnilKumarTeegala.github.io)
 
 # Object Oriented Programming in Python
 
@@ -52,7 +53,7 @@ Here, `obj` is object of class `student`
 
 ## Constructor
 
-### __init__
+### \_\_init__
 We use the **__init__()** method to initialize (e.g., specify) an object’s initial attributes by giving them their default value (or state). This method must have at least one argument as well as the self variable, which refers to the object itself (e.g.: student)
 
 **`Note:`** We will never have to call the `__init__()` method; it gets called automatically when we create a new `class` instance.
