@@ -58,7 +58,7 @@ class student:
         self.name = name
         self.rollnumber = rollnumber
 ```
-Types of Attributes
+## Types of Attributes
 1. **Instance variables**:
 They are owned by the specific instances of a class. This means for two different instances the instance attributes are usually different
 
@@ -67,7 +67,7 @@ Class attributes are attributes which are owned by the class itself. They will b
 example:
 ```python
 class student:
-  branch = 'EEE'
+  college = 'APSSDC'
   def __init__(self, name, rollnumber):
     self.name = name
     self.rollnumber = rollnumber
@@ -77,7 +77,45 @@ print("Instance variables are:")
 print(std1.name)
 print(std2.name)
 print("Class variables are:")
-print(std1.branch)
-print(std2.branch)
+print(std1.college)
+print(std2.college)
 ```
+After Execution the output is
+```output
+Instance variables are:
+Student1
+Student2
+Class variables are:
+APSSDC
+APSSDC
+```
+## Types of Methods
+1. Instance methods
+Instance methods are defined inside a class and are used to get the contents of an instance. They can also be used to perform operations with the attributes of our objects. Like the `__init__` method, the first argument is always `self`
+
+Example:
+```python
+class student:
+    college = 'APSSDC'
+    
+    def __init__(self, subject1, subject2, subject3):
+        self.subject1 = subject1
+        self.subject2 = subject2
+        self.subject3 = subject3
+
+    def average(self):
+        return (self.subject1 + self.subject2 + self.subject3) / 3
+        
+std1 = student(58,92,45)
+std2 = student(96,91,85)
+
+print('Average marks of std1 is:', std1.average())
+print('Average marks of std2 is:', std2.average())
+```
+The Instance methods are classified in two types
+i. Accesor method
+ii. Mutator method
+2. Class methods
+3. Static methods
+
 ## Modules and Packages in Python
