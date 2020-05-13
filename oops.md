@@ -90,7 +90,8 @@ APSSDC
 APSSDC
 ```
 ## Types of Methods
-1. Instance methods
+1. **Instance methods**
+
 Instance methods are defined inside a class and are used to get the contents of an instance. They can also be used to perform operations with the attributes of our objects. Like the `__init__` method, the first argument is always `self`
 
 Example:
@@ -112,10 +113,103 @@ std2 = student(96,91,85)
 print('Average marks of std1 is:', std1.average())
 print('Average marks of std2 is:', std2.average())
 ```
+After Executing the output is
+```output
+Average marks of std1 is: 65.0
+Average marks of std2 is: 90.66666666666667
+```
 The Instance methods are classified in two types
-i. Accesor method
-ii. Mutator method
-2. Class methods
-3. Static methods
 
+**i. Accessor method**
+
+An `accessor` method is a function that returns a copy of an internal variable or computed value. A common practice is to name these with the word `get`. 
+
+**ii. Mutator method**
+
+A `mutator` method is a function that modifies the value of an internal data variable in some way. The simplest form of mutator function is one that sets a variable directly to a new value. A common practice is to name these with the word `set`.
+
+Example:
+```python
+class student:
+    college = 'APSSDC'
+    
+    def __init__(self, subject1, subject2, subject3):
+        self.subject1 = subject1
+        self.subject2 = subject2
+        self.subject3 = subject3
+
+    def average(self):
+        return (self.subject1 + self.subject2 + self.subject3) / 3
+        
+    def get_subject1(self):
+        return self.subject1
+        
+    def set_subject1(self):
+        return self.subject1 + 5
+        
+std1 = student(58,92,45)
+std2 = student(96,91,85)
+
+print('Subject1 marks of before adding grace marks is:', std1.get_subject1())
+print('Subject1 marks of after addding grace marks is:', std2.get_subject1())
+```
+After Executing instance method output is:
+```output
+Subject1 marks of before adding grace marks is: 58
+Subject1 marks of after addding grace marks is: 96
+```
+
+2. **Class methods**
+```python
+class student:
+    college = 'APSSDC'
+    
+    def __init__(self, subject1, subject2, subject3):
+        self.subject1 = subject1
+        self.subject2 = subject2
+        self.subject3 = subject3
+
+    def average(self):
+        return (self.subject1 + self.subject2 + self.subject3) / 3
+        
+    @classmethod
+    def get_college_name(cls):
+        return cls.college
+
+
+print('College name of students is:', student.get_college_name())
+
+
+```
+After excuting class method the output is
+```output
+College name of students is: APSSDC
+```
+3. **Static methods**
+```python
+class student:
+    college = 'APSSDC'
+    
+    def __init__(self, subject1, subject2, subject3):
+        self.subject1 = subject1
+        self.subject2 = subject2
+        self.subject3 = subject3
+
+    def average(self):
+        return (self.subject1 + self.subject2 + self.subject3) / 3
+        
+    @classmethod
+    def get_college_name(cls):
+        return cls.college
+        
+    @staticmethod
+    def about_us():
+        print('APSSDC is non profit Government Organisation')
+ 
+print('About APSSDC:\n', student.about_us())
+```
+After executing static method output is
+```output
+APSSDC is non profit Government Organisation
+```
 ## Modules and Packages in Python
