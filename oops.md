@@ -4,6 +4,8 @@
 2. [Object](#Object)
 3. [Constructor](#Constructor)
 4. [Python Packages and modules using OOPs](#Modules-and-Packages-in-Python')
+    1. [Modules](#Modules)
+    2. [Packages](#Packages)
 
 
 Python is a multi-paradigm programming language. Meaning, it supports different programming approach.
@@ -225,3 +227,53 @@ APSSDC is non profit Government Organisation
 ```
 
 ## Modules and Packages in Python
+
+### Module
+
+Modules in Python are simply Python files with a `.py` extension. The name of the module will be the name of the file. A Python module can have a set of functions, classes or variables defined and implemented.
+
+Example of module with name factorial is shown below.
+```python
+def fact(num):
+  result = 1
+  for i in range(1,num + 1):
+      result *= i
+  return result
+  
+pi = 3.14
+```
+1. **Importing module objects to the current namespace:**
+```python
+from factorial import fact
+```
+2. **Importing all objects from a module**
+```python
+from factorial import *
+```
+3. **Importing object with Custom import name**
+```python
+from factorial import fact as f
+```
+
+We can look for which `functions` are implemented in each module by using the `dir` function:
+```python
+dir(factorial)
+```
+
+### Packages
+Packages are namespaces which contain multiple packages and modules themselves. They are simply directories, but with a twist.
+
+Each package in Python is a directory which MUST contain a special file called `__init__.py`. This file can be empty, and it indicates that the directory it contains is a Python package, so it can be imported the same way a module can be imported.
+
+If we create a directory called `calculator`, which marks the package name, we can then create a module inside that package called `factorial`. We also must not forget to add the `__init__.py` file inside the `calculator` directory.
+
+To use the module `factorial` from package `calculator`, we can import it in two ways
+
+1. **Method - 1**
+```python
+import calculator.factorial
+```
+2. **Method - 2**
+```python
+from calculator import factorial
+```
