@@ -87,7 +87,7 @@ print(std1.college)
 print(std2.college)
 ```
 After Execution the output is
-```output
+```python
 Instance variables are:
 Student1
 Student2
@@ -246,7 +246,7 @@ def fact(num):
   
 pi = 3.14
 ```
-1. **Importing module objects to the current namespace:**
+1. **Importing module objects to the current namespace**
 ```python
 from factorial import fact
 ```
