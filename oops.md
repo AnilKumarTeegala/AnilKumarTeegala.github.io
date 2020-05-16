@@ -11,7 +11,7 @@
     1. [Module](#Module)
     2. [Packages](#Packages)
 
-
+****************************
 Python is a multi-paradigm programming language. Meaning, it supports different programming approach.
 
 One of the popular approach to solve a programming problem is by creating objects. This is known as Object-Oriented Programming (OOP).
@@ -50,7 +50,7 @@ The example for object of student class can be:
 obj = student()
  ```
 Here, `obj` is object of class `student`
-
+**************
 ## Constructor
 
 ### \_\_init__
@@ -229,7 +229,7 @@ After executing static method output is
 ```output
 APSSDC is non profit Government Organisation
 ```
-
+************
 ## Modules and Packages in Python
 
 ### Module
